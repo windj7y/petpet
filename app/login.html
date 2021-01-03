@@ -1,0 +1,50 @@
+---
+title: PETPET | 登入
+layout: ./app/layout.ejs
+engine: ejs
+current: login
+---
+
+<div class="position-lg-relative pt-18 pb-27 py-md-31 py-lg-0">
+  <img src="https://hexschool.github.io/webLayoutTraining1st/petpet-week8/index-1.png" alt="index-1" class="dog-img d-none d-lg-block">
+  <div class="container position-lg-absolute position-lg-center">
+    <div class="row justify-content-center justify-content-lg-end">
+      <div class="col-md-8 col-lg-7">
+        <h2 class="font-weight-bold text-primary mb-10 mb-md-18">登入</h2>
+        <form>
+          <div class="form-group">
+            <label for="email">電子信箱</label>
+            <input type="email" class="form-control h5" id="email" placeholder="example@gmail.com">
+          </div>
+          <div class="form-group">
+            <label for="password">密碼</label>
+            <input type="password" class="form-control h5 mb-1" id="password" placeholder="請輸入密碼">
+            <a href="#" class="font-sm text-muted hover-primary">忘記密碼</a>
+          </div>
+          <div class="form-group form-check mb-11">
+            <input type="checkbox" class="form-check-input" id="remember">
+            <label class="form-check-label" for="remember">記住我的帳號</label>
+          </div>          
+          <div class="form-row mb-3">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <a href="#" class="d-flex justify-content-center align-items-center text-muted hover-secondary-light border border-light-gray rounded py-1">
+                <img src="https://hexschool.github.io/webLayoutTraining1st/petpet-week8/facebook.svg" alt="facebook">
+                Facebook
+              </a>
+            </div>
+            <div class="col-lg-6 mb-15">
+              <a href="#" class="d-flex justify-content-center align-items-center text-muted hover-secondary-light border border-light-gray rounded py-1">
+                <img src="https://hexschool.github.io/webLayoutTraining1st/petpet-week8/google.svg" alt="google">
+                Google
+              </a>
+            </div>
+            <div class="col-lg-5">
+              <a href="member.html" class="btn btn-secondary h5 w-100" type="button">登入</a>
+            </div>
+          </div>
+          <a href="#" class="text-secondary">還沒註冊嗎？</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

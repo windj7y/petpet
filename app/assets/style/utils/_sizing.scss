@@ -1,0 +1,143 @@
+// width 和 height 加上斷點
+@each $prop, $abbrev in (width: w, height: h) {
+  @each $size, $length in $sizes {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    
+        .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+      }
+    }
+  }
+}
+
+.w-{
+  @media (min-width: 992px) {
+    &sm{
+      width: 14.96062% !important;
+    }
+
+    &md{
+      width: 18.89763% !important;
+    }
+
+    &lg{
+      width: 33.07086% !important;
+    }
+  }
+}
+
+.w-custom-{
+  &1{
+    width: 75px;
+    
+    @media (min-width: 768px) {
+      width: 65px;
+    }
+  }
+
+  &2{
+    width: 163px;
+
+    @media (min-width: 576px) {
+      width: 200px;
+    }
+
+    @media (min-width: 768px) {
+      width: 160px;
+    }
+  }
+
+  &3{
+    width: 241px;
+
+    @media (min-width: 768px) {
+      width: 224px;
+    }
+  }
+
+  &4{
+    width: 80px;
+  }
+
+  &5{
+    width: 80px;
+
+    @media (min-width: 768px) {
+      width: 120px;
+    }
+  }
+
+  &6{
+    width: 80px;
+
+    @media (min-width: 768px) {
+      width: 128px;
+    }
+  }
+
+  &7{
+    @media (min-width: 768px) {
+      width: 330px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 320px;
+    }
+  }
+
+  &8{
+    @media (min-width: 768px) {
+      width: 330px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 350px;
+    }
+  }
+}
+
+.h-custom-{
+  &1{
+    height: 132px;
+  }
+
+  &2{
+    height: 352px;
+
+    @media (min-width: 768px) {
+      height: 315px;
+    }
+  }
+
+  &3{
+    height: 128px;
+  }
+}
+
+.img-custom-{
+  &1{
+    width: 75px;
+    height: 75px;
+  
+    @media (min-width: 768px) {
+      width: 95px;
+      height: 95px;
+    }
+  }
+
+  &2{
+    width: 100px;
+    height: 100px;
+
+    @media (min-width: 768px) {
+      width: 150px;
+      height: 150px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 282px;
+      height: 282px;
+    }
+  }
+}

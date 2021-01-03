@@ -1,0 +1,44 @@
+.picture-replace{
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.material-icons{
+  vertical-align: bottom;
+}
+
+.object-cover{
+  object-fit: cover;
+}
+
+.text-underline{
+  text-decoration: underline;
+}
+
+.hover-{
+  &primary{
+    &:hover{
+      color: theme-color("primary") !important;
+    }
+  }
+
+  &secondary{
+    &:hover{
+      color: theme-color("secondary") !important;
+    }
+    
+    &-light{
+      &:hover{
+        color: $white !important;
+        background: #ff834d !important;
+      }
+    }    
+  }
+
+  &thirdly{
+    &:hover{
+      color: theme-color("thirdly") !important;
+    }
+  }
+}

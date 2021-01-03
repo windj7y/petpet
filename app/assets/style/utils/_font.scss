@@ -1,0 +1,27 @@
+// .h1~.h6 加上斷點，並加入 sm、lg 和 xl
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .h1#{$infix} { @include font-size($h1-font-size); }
+    .h2#{$infix} { @include font-size($h2-font-size); }
+    .h3#{$infix} { @include font-size($h3-font-size); }
+    .h4#{$infix} { @include font-size($h4-font-size); }
+    .h5#{$infix} { @include font-size($h5-font-size); }
+    .h6#{$infix} { @include font-size($h6-font-size); }
+    .font#{$infix}-sm { font-size: $font-size-sm; }
+    .font#{$infix}-lg { font-size: 3rem; }
+    .font#{$infix}-xl { font-size: 5rem; }
+  }
+}
+
+// 加入 medium、semibold 和斷點
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .font-weight#{$infix}-medium   { font-weight: 500; }
+    .font-weight#{$infix}-semibold { font-weight: 600; }
+    .font-weight#{$infix}-bold     { font-weight: $font-weight-bold !important; }
+  }
+}
